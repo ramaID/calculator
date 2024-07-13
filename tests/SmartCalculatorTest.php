@@ -26,6 +26,8 @@ class SmartCalculatorTest extends TestCase
             ['2*3', 6],
             ['4 / 2', 2],
             ['4/2', 2],
+            ['4 / 0', "Infinity"],
+            ['4/0', "Infinity"],
         ];
     }
 }
