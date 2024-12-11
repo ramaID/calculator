@@ -51,5 +51,8 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run test suite
-      run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover coverage.xml
+      run: |
+        XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover coverage.xml
+        cp sonar-project.properties.example sonar-project.properties
+        sonar-scanner -Dsonar.login=${{ secrets.SONAR_LOGIN }} -Dsonar.host.url=${{ secrets.SONAR_HOST }}
       working-directory: /var/www/html
