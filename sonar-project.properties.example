@@ -1,0 +1,4 @@
+sonar.projectKey=kalkulator-rama
+
+sonar.sources=src
+sonar.php.coverage.reportPaths=coverage.xml
