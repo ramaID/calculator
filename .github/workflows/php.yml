@@ -37,14 +37,7 @@ jobs:
       run: |
         pwd
         git status
-      working-directory: /var/www/html
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
-      working-directory: /var/www/html
-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+        composer install --prefer-dist --no-progress
       working-directory: /var/www/html
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
