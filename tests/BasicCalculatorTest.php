@@ -41,4 +41,11 @@ class BasicCalculatorTest extends TestCase
         $result = $calculator->divide(6, 0);
         $this->assertEquals("Infinity", $result);
     }
+
+    public function testAddAndReturnAsString(): void
+    {
+        $calculator = new BasicCalculator();
+        $result = $calculator->addAndReturnAsString(1, 2);
+        $this->assertEquals("tiga", $result);
+    }
 }
